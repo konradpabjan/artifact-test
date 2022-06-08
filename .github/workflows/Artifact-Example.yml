@@ -4,6 +4,10 @@ jobs:
   Artifact-Upload:
     runs-on: ubuntu-latest
     steps:
+    - name: Some annotation
+      run: |
+        echo "::error::Some annotation"
+    
     - name: Create large file
       run: |
         mkdir content
