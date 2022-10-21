@@ -15,7 +15,7 @@ jobs:
         head -c 10000 </dev/urandom >file1.zip
         cd ..
     - name: Upload First
-      uses: actions/upload-artifact@v2.2.4
+      uses: actions/upload-artifact@v3
       with:
         name: my-artifact
         path: |
