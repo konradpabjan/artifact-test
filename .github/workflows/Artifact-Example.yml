@@ -5,17 +5,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Create file
+    - name: Show me some file
       run: |
-        cd /
-        echo hello > file.txt
-    
-    - name: Upload Artifact v4
-      uses: actions/upload-artifact@v4
-      with:
-        name: my-artifact-v4
-        path: /file.txt
-        retention-days: 1
+        cd /etc
+        ls
+  
   
   
       
