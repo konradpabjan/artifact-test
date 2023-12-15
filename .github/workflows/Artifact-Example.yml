@@ -12,14 +12,12 @@ jobs:
       run: |
         mkdir content
         cd content
-        head -c 100 </dev/urandom >file1.zip
-        touch -d "$(date -R -r file1.zip) - 2 hours" file1.zip
+        head -c 100 </dev/urandom >file
     - name: Upload First
       uses: actions/upload-artifact@v4
       with:
         name: my-artifact
-        path: |
-          content/*
+        path: file
         retention-days: 1
   
       
