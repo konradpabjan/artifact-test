@@ -10,8 +10,6 @@ jobs:
     
     - name: Create file
       run: |
-        mkdir content
-        cd content
         head -c 100 </dev/urandom >file
     - name: Upload First
       uses: actions/upload-artifact@v4
