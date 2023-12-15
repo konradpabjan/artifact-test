@@ -8,18 +8,16 @@ jobs:
       run: |
         echo "::error::Some annotation"
     
-    - name: Create large file
+    - name: Create file
       run: |
         mkdir content
         cd content
-        head -c 10000 </dev/urandom >file1.zip
-        cd ..
+        head -c 100 </dev/urandom >file1.zip
+        touch -d "$(date -R -r file1.zip) - 2 hours" file1.zip
     - name: Upload First
       uses: actions/upload-artifact@v4
       with:
-        name: |
-            line 1
-            line 2
+        name: my-artifact
         path: |
           content/*
         retention-days: 1
