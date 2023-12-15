@@ -10,7 +10,7 @@ jobs:
         cd /etc
         ls
   
-    - name: Upload Artifact v4
+    - name: Upload Artifact v3
       uses: actions/upload-artifact@v3
       with:
         name: my-artifact-v4
