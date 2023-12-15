@@ -4,13 +4,10 @@ jobs:
   Artifact-Upload:
     runs-on: ubuntu-latest
     steps:
-    - name: Some annotation
-      run: |
-        echo "::error::Some annotation"
     
     - name: Create file
       run: |
-        head -c 100 </dev/urandom >file
+        echo hello > file
     - name: Upload First
       uses: actions/upload-artifact@v4
       with:
