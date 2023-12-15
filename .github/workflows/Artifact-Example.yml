@@ -2,7 +2,7 @@ name: Test artifact V4
 on: [workflow_dispatch, pull_request]
 jobs:
   Artifact-Upload:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     
     - name: Create file
