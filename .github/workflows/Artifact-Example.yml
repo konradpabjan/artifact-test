@@ -5,12 +5,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Show me some file
+    - name: Show me some file under root
       run: |
         cd /etc
         ls
   
-  
+    - name: Upload Artifact v4
+      uses: actions/upload-artifact@v4
+      with:
+        name: my-artifact-v4
+        path: /etc/cgrules.conf
+        retention-days: 1
   
       
   
