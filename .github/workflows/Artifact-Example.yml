@@ -8,12 +8,21 @@ jobs:
     - name: Create file
       run: |
         echo hello > file
-    - name: Upload First
+    
+    - name: Upload Artifact v4
       uses: actions/upload-artifact@v4
       with:
-        name: my-artifact
+        name: my-artifact-v4
         path: file
         retention-days: 1
+
+    - name: Upload Artifact v3
+      uses: actions/upload-artifact@v3
+      with:
+        name: my-artifact-v3
+        path: file
+        retention-days: 1
+  
   
       
   
