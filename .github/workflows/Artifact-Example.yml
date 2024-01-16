@@ -5,16 +5,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     
-    - name: Show me some file under root
+    - name: Create file with content
       run: |
-        cd /etc
-        ls
+        for ((i=1;i<=10000;i++)) ; do echo "Hello World" >> file.txt ;  done
   
     - name: Upload Artifact v3
       uses: actions/upload-artifact@v3
       with:
-        name: my-artifact-v4
-        path: /etc/cgrules.conf
+        name: my-artifact
+        path: file.txt
         retention-days: 1
   
       
