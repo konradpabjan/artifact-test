@@ -10,7 +10,7 @@ jobs:
         for ((i=1;i<=10000;i++)) ; do echo "Hello World" >> file.txt ;  done
   
     - name: Upload Artifact v3
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v1
       with:
         name: my-artifact
         path: file.txt
